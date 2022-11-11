@@ -1,0 +1,13 @@
+$include /etc/inputrc
+
+set editing-mode vi
+
+set completion-ignore-case On
+set visible-stats On
+set show-all-if-ambiguous On
+set bell-style none
+
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\es": "\C-asudo \C-e"
+"\e\"": "\C-a\"\C-e\""
