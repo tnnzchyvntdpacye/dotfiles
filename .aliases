@@ -1,15 +1,34 @@
 alias sudo='sudo ' #makes aliases available with sudo
 
-alias aliases='vim ~/.aliases'
+alias ep='nvim ~/.bashrc'
+alias sp='source ~/.bashrc'
+
+alias aliases='nvim ~/.aliases'
+alias c='clear'
+
+# git
+alias ga='git add '
+alias gc='git commit -am'
+alias gs='git status -s'
+
 alias ls='ls -h --color=auto'
 alias ll='ls -alh'
 alias lfc="lfcd"
 alias myip='curl icanhazip.com'
-alias ep='vim ~/.bashrc'
-alias sp='source ~/.bashrc'
+
+# start / down
+alias po='poweroff'
+alias r='reboot'
+alias sus='systemctl suspend'
+
+# tmux
 alias tm='tmux'
 alias tmls='tmux ls'
 alias tmn='tmux new -s one -n uel'
+
+alias up='sudo dnf update'
+alias envim='cd ~/.config/nvim ; nvim ~/.config/nvim/'
+alias vi='nvim'
 alias ..='cd ..'
 alias ...='cd ../../'
 

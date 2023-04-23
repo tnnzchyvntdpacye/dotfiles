@@ -1,6 +1,6 @@
 $include /etc/inputrc
 
-set editing-mode vi
+# set editing-mode vi
 
 set completion-ignore-case On
 set visible-stats On

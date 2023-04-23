@@ -22,8 +22,8 @@ bind '"\C-o":"lfcd\C-m"'
 
 #----------------- editor -----------------
 
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=vi
+export VISUAL=vi
 
 #----------------- functions -----------------
 

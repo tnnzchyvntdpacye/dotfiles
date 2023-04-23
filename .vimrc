@@ -58,7 +58,10 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'kyoz/purify', { 'rtp': 'vim' }
 Plug 'sainnhe/gruvbox-material'
 Plug 'fatih/vim-go'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax' 
 call plug#end()
+
 " Set contrast.
 " This configuration option should be placed before
 " `colorscheme gruvbox-material`.
