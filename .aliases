@@ -17,6 +17,7 @@ alias lfc="lfcd"
 alias myip='curl icanhazip.com'
 
 # start / down
+alias p='poweroff'
 alias po='poweroff'
 alias r='reboot'
 alias sus='systemctl suspend'
