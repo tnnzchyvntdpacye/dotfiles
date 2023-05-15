@@ -4,29 +4,19 @@
 # TERM is only set outside of tmux
 [ -z "$TMUX" ] && export TERM=xterm-256color
 
-#----------------- alias -----------------
-
+# alias
 if [ -f ~/.aliases ]; then
 	source ~/.aliases
 fi
 
-#----------------- lf --------------------
-
-LFCD="/home/simon/.config/lf/lfcd.sh"
-if [ -f "$LFCD" ]; then
-      source "$LFCD"
-fi
-
-#----------------- bind -----------------
+# bind
 bind '"\C-o":"lfcd\C-m"'
 
-#----------------- editor -----------------
+# editor
+export EDITOR=nvim
+export VISUAL=nvim
 
-export EDITOR=vi
-export VISUAL=vi
-
-#----------------- functions -----------------
-
+# functions
 mcd () { mkdir -p "$1" && cd "$1"; }
 function shenv () {
 	declare -p |
@@ -59,20 +49,16 @@ lfcd () {
   fi
 }
 
-#----------------- history -----------------
-
+# history
 HISTCONTROL=ignoreboth #short for ignorespace:ignoredups
 shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 HISTIGNORE="exit:clear"
 
-#----------------- path -----------------
+# path -> see .bash_profile
 
-# see .bash_profile
-
-#----------------- PS1 -----------------
-
+# PS1
 function setPrompt() {
 	let error_code=$?
 	fgrndGr='\e[00;32m'
@@ -84,14 +70,12 @@ function setPrompt() {
 
 PROMPT_COMMAND=setPrompt
 
-#----------------- less -----------------
-# Set colors for less. Borrowed from
-# https://wiki.archlinux.org/index.php/Color_output_in_console#less .
-export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
-export LESS_TERMCAP_md=$'\E[1;36m'     # begin blink
-export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
-export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
-export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
-export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
-export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
+# ?
 . "$HOME/.cargo/env"
+
+# lf
+LFCD="/home/simon/.config/lf/lfcd.sh"
+if [ -f "$LFCD" ]; then
+      source "$LFCD"
+fi
+
