@@ -13,7 +13,7 @@ alias gs='git status -s'
 alias gst='git status '
 
 alias ls='ls -h --color=auto'
-alias ll='ls -alh'
+alias ll='ls -Alh'
 alias lfc="lfcd"
 alias myip='curl icanhazip.com'
 
@@ -26,7 +26,7 @@ alias sus='systemctl suspend'
 # tmux
 alias tm='tmux'
 alias tmls='tmux ls'
-alias tmn='tmux new -s one -n uel'
+alias tmn='tmux new -s one -n term'
 
 alias t="tgpt.sh "
 
