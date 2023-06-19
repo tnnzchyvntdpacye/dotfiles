@@ -56,8 +56,6 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 HISTIGNORE="exit:clear"
 
-# path -> see .bash_profile
-
 # PS1
 function setPrompt() {
 	let error_code=$?
