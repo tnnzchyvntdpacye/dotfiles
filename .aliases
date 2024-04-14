@@ -6,11 +6,31 @@ alias sp='source ~/.bashrc'
 alias aliases='nvim ~/.aliases'
 alias c='clear'
 
+alias vi='nvim'
+alias vim='nvim'
+
+#ssh
+#alias vps='ssh root@poiu.fun'
+alias vps='ssh root@89.23.106.74'
+
 # git
 alias ga='git add '
-alias gc='git commit -am'
+alias gb='git branch '
+alias gc='git commit -am '
+alias gca='git commit --amend '
+alias gll='git log '
+alias gl='git log --oneline '
+alias glg='git log --graph '
 alias gs='git status -s'
 alias gst='git status '
+alias gsw='git switch '
+
+# docker
+alias dc='docker compose'
+alias dcb='docker compose build'
+alias dcu='docker compose up'
+alias dcd='docker compose down'
+alias dip='docker image prune'
 
 alias ls='ls -h --color=auto'
 alias ll='ls -Alh'
@@ -25,28 +45,32 @@ alias sus='systemctl suspend'
 
 alias t="tgpt.sh "
 
+alias ..='cd ..'
+alias ...='cd ../../'
 alias up='sudo pacman -Syu'
 alias ins='sudo pacman -S '
 alias pi='ping google.com'
-alias envim='cd ~/.config/nvim ; nvim ~/.config/nvim/'
-alias vi='nvim'
-alias ..='cd ..'
-alias ...='cd ../../'
+alias tree='tree -C '
+alias ala='nvim ~/.config/alacritty/alacritty.toml'
+alias at='alacritty-themes'
+alias envim='cd ~/.config/nvim ; nvim'
 
 alias showenv='(set -o posix; set)'
 
 # tmux
 alias tm='tmux'
 alias tmls='tmux ls'
+#TODO: fix strange behavior with 1.1 window not working correctly
 alias tmc='
     tmux new -d -s c_ses -n w.log;
     tmux new-window -t c_ses -n editor;
     tmux split-window -h -t c_ses:1 -p 50;
     tmux split-window -v -t c_ses:1.2 -p 50;
-    tmux send-keys -t c_ses:1.1 "vi ~/documents/work-log.md" C-m;
+    tmux send-keys -t c_ses:1.1 "nvim ~/documents/work-log.md" C-m;
     tmux send-keys -t c_ses:1.2 "cal -m" C-m;
-    tmux send-keys -t c_ses:1.3 "vi ~/documents/topics.md" C-m;
-    tmux send-keys -t c_ses:2.1 "cd ~/code" C-m;
-    tmux select-window -t c_ses:1.1;
+    tmux send-keys -t c_ses:1.3 "nvim ~/documents/topics.md" C-m;
+    tmux send-keys -t c_ses:2.1 "cd ~/code/cpp" C-m;
+    tmux select-window -t c_ses:1;
+    tmux select-pane -t c_ses:1.1;
     tmux attach-session -t c_ses;
 '

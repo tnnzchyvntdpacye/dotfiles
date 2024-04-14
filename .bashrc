@@ -52,8 +52,8 @@ lfcd () {
 # history
 HISTCONTROL=ignoreboth #short for ignorespace:ignoredups
 shopt -s histappend
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=3000
+HISTFILESIZE=3000
 HISTIGNORE="exit:clear"
 
 # PS1
@@ -77,3 +77,7 @@ if [ -f "$LFCD" ]; then
       source "$LFCD"
 fi
 
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
